@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+1. 시작태그와 닫는태그로 구성된 태그가 있어요 !! <head> </head>
+2. 시작태그만 가지고 있는 태그가 있어요! ex) <meta>
+
+
+
+
+    tag는 중첩구조를 가질 수 있음
+    하나의 tag가 가른 tag들을 포함할 수 있어요!!
+    이때 부모와 자식 후손의 관계가 성립해요!
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      // charset : 속성 property or atrribute 해당 tag의 세부적인 일을 담당
+    <title>Title</title>
+</head>
+
+<body>                  // 부모
+    <div>               // 자식
+        <h1>하하</h1>    // 자식 (후손)     <h1>하하</h1> 전체가 element /  <h1> tag 정해진 일만하는것
+    </div>
+</body>
+
+HTML 문서는 크게 2가지 부분으로 구성되요!
+<head></head> : 설정부분
+<body> : web browser에서 rendering 할 데이터.
+
+tag는 크게 두 가지 종류가 있어요!!
+1. block level element
+    무조건 1라인을 차지
+2. inline element
+    내용에 대한 영역만 차지
+
+-->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--CSS를 기본적으로 사용하기 위해서 style tag를 이용!!-->
+
+    <!-- h2를 찾아서 "{}" 안에 명시 스타일을 적용 -->
+    <style>
+        h2 {
+            color: red;
+            background-color: yellow;
+            font-family:;
+            font-size: 30pt;
+            }
+        .myclass {
+            color: red;
+            background-color: blue;
+            font-family:;
+            font-size: 30pt;
+            }
+    </style>
+</head>
+    <body>
+        <h1 class="myclass">아우성!!</h1>
+        <h2>아우성!!</h2>
+        <h3>아우성!!</h3>
+        <!--inline element : 영역만 잡아주는 tag-->
+        <span>이것은 소리없는 아우성!!</span>
+        <!--block level element : 영역만 잡아주고 tag + 줄바꿈-->
+        <div>이것은 소리없는 아우성!!</div>
+        <!--속성 중에 data- 를 붙여서 새로운 속성을 만듬!! -->
+        <img src="image/NAVER.jpeg" width="300" data-author="홍길동">
+
+
+        <!--줄바꿈-->
+        <br><br><br><br><br>
+
+        <!--unordered list-->
+        <ul>
+            <li class="myclass">서울</li>
+            <li>인천</li>
+            <li>제주</li>
+        </ul>
+
+
+        <!--order list-->
+        <ol>
+            <li>서울</li>
+            <li>인천</li>
+            <li>제주</li>
+        </ol>
+        <a href="http://www.naver.com">여기를 클릭클릭!!</a>
+        <input type="button" value="버튼을 누르세요!!">
+        <input type="text">
+        <input type="date">
+        <input type="color">
+    </body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="js/06_jQuery_exec.js"></script>
+</head>
+<body>
+    <div>
+        <select onchange="my_func()">        <!--select 선택입력 상자!!!!-->
+            <option>사과</option>
+            <option>파인애플</option>
+            <option>참외</option>
+        </select>
+        <ul>
+            <li id="apple">사과</li>
+            <li id="fineapple">파인애플</li>
+            <li class="my_list1">참외</li>
+        </ul>
+        <!--사용자 입력양식 form tag안에 명시-->
+        <form action="호출할 서버쪽 프로그램" method="POST">
+            <input type="text" size="20"> <!--size = 글자길이-->
+            <ol>
+                <li class="my_list">고양이</li>
+                <li class="my_list">호랑이</li>
+                <li class="my_list">강아지</li>
+            </ol>
+        </form>
+    </div>
+    <input type="button" value="클릭클릭!!" onclick="print_text()">
+</body>
+</html>

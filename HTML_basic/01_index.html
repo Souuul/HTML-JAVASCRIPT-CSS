@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- 일반적인 설정이 와요!! -->
+    <meta charset="UTF-8">
+    <title>홈페이지 이동 !</title>
+    <style>
+        h1 {
+            color: #204397;
+        }
+
+        <!--
+        CSS_h1을 찾아서 스타일을 변경!
+
+        !
+        -->
+    </style>
+
+    <script>
+        function my_func() {
+            alert("버튼을 누르면 웹페이지로 이동합니다!!");  // 경고창을 출력!
+        } <!-- 자바스크립트 -->
+
+    </script>
+</head>
+
+    <body>
+    <!-- BROWSER에 출력하고 싶은 내용이 와요!! -->
+        <h1> 웹페이지로 이동을 해봐요!! </h1>      <!-- heading 글자크기를 크게 // 문장전체 : element, <> : tag-->
+        <input onclick="my_func()" type="button" value="사용방법 클릭클릭!">
+    <!-- input type="button" value="클릭클릭!!" onclick="my_func()"-->
+    <br><br>
+    <!--유지보수가 매우힘듬-->
+    <img height="200" src="image/GOOGLE.png" width="260"> <br>
+
+    <input onclick="window.open('http://www.google.com') " type="button" value="구글 페이지 새창으로 열기">
+    <input onclick="location.href='http://www.google.com';" type="button" value="구글 페이지로 이동"/>
+
+    <br><br>
+    <img src="image/NAVER.jpeg"> <br>        <!-- img src 그림을 삽입 // property-->
+    <input onclick="window.open('http://www.naver.com') " type="button" value="네이버로 페이지 새창으로 열기">
+    <input onclick="location.href='http://www.naver.com';" type="button" value="네이버 페이지로 이동"/>
+    </body>
+</html>
+
+
