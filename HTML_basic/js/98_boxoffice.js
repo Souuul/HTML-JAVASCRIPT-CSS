@@ -101,7 +101,7 @@ function call_ajax1() {
 
                     },
                     error : function () {
-                        alert("망함....")
+                        alert("호출실패 다시한번 클릭해보세요....")
 
 
                     }
