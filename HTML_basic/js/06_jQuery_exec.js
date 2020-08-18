@@ -5,15 +5,17 @@ function print_text() {
     // console.log($("#fineapple").text()) // .text 함수는 글자를 찾는 역할!
     // console.log($("ul > li.my_list").text())
     // console.log($("ul > li[class]").text())
-    console.log($("ul li[class = my_list1]").text()) // 특정 클래스만 선택가능
-    console.log($(".my_list1").text()) // class 명으로 바로 선택가능
+    // console.log($("ul li[class = my_list1]").text()) // 특정 클래스만 선택가능
+    // console.log($("ul li.my_list1").text()) // 특정 클래스만 선택가능
+    // console.log($("ul>li.my_list1").text()) // 특정 클래스만 선택가능
+    // console.log($(".my_list1").text()) // class 명으로 바로 선택가능
 
     // console.log($("input > type[text]").text()) // input 사이의 글자를 가져옴
     // console.log($("input > [type=text]").text()) // input 사이의 글자를 가져옴
-    // console.log($("input[type = text]").val())  // 사용자가 입력한 글자를 가져옴
+    // console.log($("input[type = text]").val())  // 사용자가 입력한 글자를 가져옴 // 띄어쓰기 안됨
     // console.log($("input > type.text").val())  // input이 부모가 아니기 때문에 불러오기 실패
-    // console.log($("input[type[text]]").val())  // error
-    // console.log($("input > type[text]").val())  // input이 부모가 아니기 때문에 불러오기 실패
+    // console.log($("input[type=text]]").val())  // error
+    // console.log($("input > type[text]").val())  // input이 부모가 아니기 때문에 불러오기 실패 같은 엘리먼트
     // console.log($("[type = text]").val())   // 모든 type = text 찾음
     // console.log($("ol > li.my_list:first").text()) // 위치를 가지고 찾음 (첫번째)
     // console.log($("ol > li.my_list:last").text()) // 위치를 가지고 찾음 (마지막)
