@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<!--    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>-->
+<!--    <script>-->
+<!--        // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.-->
+<!--        Kakao.init('6dcbf2919a833310ee6ae80bcdab2ade');-->
+
+<!--        // SDK 초기화 여부를 판단합니다.-->
+<!--        console.log(Kakao.isInitialized());-->
+<!--    </script>-->
+
+</head>
+<body>
+
+<a id="send-to-btn" href="#" onclick="sendTo();">
+    <img src="//k.kakaocdn.net/14/dn/btqc6xrxbuT/7VJk7YSWITkz9K9pbXEffk/o.jpg" />
+</a>
+<script type="text/javascript">
+    function sendTo() {
+        Kakao.Auth.login({
+            scope: 'PROFILE,TALK_MESSAGE',
+            success: function() {
+                Kakao.API.request({
+                    url: '/v2/api/talk/memo/send',
+                    data: {
+                        template_id: 3135,
+                        args:
+                            '{"title": "판교 맛집에 들르다. 다양하고 풍부한 퓨전 한정식. 깔끔한 내부 인테리어 라이언","description": "부담없는 가격에 푸짐하게 즐기는 점심메뉴 런치한정식, 불고기정식, 돼지 김치찌개 등"}',
+                    },
+                    success: function(res) {
+                        alert('success: ' + JSON.stringify(res))
+                    },
+                    fail: function(err) {
+                        alert('error: ' + JSON.stringify(err))
+                    },
+                })
+            },
+            fail: function(err) {
+                alert('failed to login: ' + JSON.stringify(err))
+            },
+        })
+
+    }
+</script>
+
+
+
+POST /v2/api/talk/memo/default/send HTTP/1.1
+Host: kapi.kakao.com
+Authorization: Bearer {USER_ACCESS_TOKEN}
+
+
+
+
+</body>
+</html>
